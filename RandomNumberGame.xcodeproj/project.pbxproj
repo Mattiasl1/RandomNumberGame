@@ -11,6 +11,10 @@
 		87DD52152760F23F00F59E80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DD52142760F23F00F59E80 /* ContentView.swift */; };
 		87DD52172760F24000F59E80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87DD52162760F24000F59E80 /* Assets.xcassets */; };
 		87DD521A2760F24000F59E80 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87DD52192760F24000F59E80 /* Preview Assets.xcassets */; };
+		87DD52212760F28600F59E80 /* Homescreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DD52202760F28600F59E80 /* Homescreen.swift */; };
+		87DD52232760F2A600F59E80 /* CoolButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DD52222760F2A600F59E80 /* CoolButton.swift */; };
+		87DD52252760F2B400F59E80 /* SmallCoolBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DD52242760F2B400F59E80 /* SmallCoolBtn.swift */; };
+		87DD52272760F2C200F59E80 /* ALTcoolBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DD52262760F2C200F59E80 /* ALTcoolBtn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		87DD52142760F23F00F59E80 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		87DD52162760F24000F59E80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87DD52192760F24000F59E80 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		87DD52202760F28600F59E80 /* Homescreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homescreen.swift; sourceTree = "<group>"; };
+		87DD52222760F2A600F59E80 /* CoolButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolButton.swift; sourceTree = "<group>"; };
+		87DD52242760F2B400F59E80 /* SmallCoolBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCoolBtn.swift; sourceTree = "<group>"; };
+		87DD52262760F2C200F59E80 /* ALTcoolBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALTcoolBtn.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,10 @@
 			children = (
 				87DD52122760F23F00F59E80 /* RandomNumberGameApp.swift */,
 				87DD52142760F23F00F59E80 /* ContentView.swift */,
+				87DD52202760F28600F59E80 /* Homescreen.swift */,
+				87DD52222760F2A600F59E80 /* CoolButton.swift */,
+				87DD52242760F2B400F59E80 /* SmallCoolBtn.swift */,
+				87DD52262760F2C200F59E80 /* ALTcoolBtn.swift */,
 				87DD52162760F24000F59E80 /* Assets.xcassets */,
 				87DD52182760F24000F59E80 /* Preview Content */,
 			);
@@ -137,7 +149,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87DD52232760F2A600F59E80 /* CoolButton.swift in Sources */,
+				87DD52272760F2C200F59E80 /* ALTcoolBtn.swift in Sources */,
 				87DD52152760F23F00F59E80 /* ContentView.swift in Sources */,
+				87DD52212760F28600F59E80 /* Homescreen.swift in Sources */,
+				87DD52252760F2B400F59E80 /* SmallCoolBtn.swift in Sources */,
 				87DD52132760F23F00F59E80 /* RandomNumberGameApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
