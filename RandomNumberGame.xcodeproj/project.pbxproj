@@ -15,6 +15,7 @@
 		87DD52232760F2A600F59E80 /* CoolButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DD52222760F2A600F59E80 /* CoolButton.swift */; };
 		87DD52252760F2B400F59E80 /* SmallCoolBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DD52242760F2B400F59E80 /* SmallCoolBtn.swift */; };
 		87DD52272760F2C200F59E80 /* ALTcoolBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DD52262760F2C200F59E80 /* ALTcoolBtn.swift */; };
+		87DD522B276111DD00F59E80 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DD522A276111DD00F59E80 /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		87DD52222760F2A600F59E80 /* CoolButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolButton.swift; sourceTree = "<group>"; };
 		87DD52242760F2B400F59E80 /* SmallCoolBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCoolBtn.swift; sourceTree = "<group>"; };
 		87DD52262760F2C200F59E80 /* ALTcoolBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALTcoolBtn.swift; sourceTree = "<group>"; };
+		87DD522A276111DD00F59E80 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				87DD52122760F23F00F59E80 /* RandomNumberGameApp.swift */,
 				87DD52142760F23F00F59E80 /* ContentView.swift */,
 				87DD52202760F28600F59E80 /* Homescreen.swift */,
+				87DD522A276111DD00F59E80 /* Settings.swift */,
 				87DD52222760F2A600F59E80 /* CoolButton.swift */,
 				87DD52242760F2B400F59E80 /* SmallCoolBtn.swift */,
 				87DD52262760F2C200F59E80 /* ALTcoolBtn.swift */,
@@ -153,6 +156,7 @@
 				87DD52272760F2C200F59E80 /* ALTcoolBtn.swift in Sources */,
 				87DD52152760F23F00F59E80 /* ContentView.swift in Sources */,
 				87DD52212760F28600F59E80 /* Homescreen.swift in Sources */,
+				87DD522B276111DD00F59E80 /* Settings.swift in Sources */,
 				87DD52252760F2B400F59E80 /* SmallCoolBtn.swift in Sources */,
 				87DD52132760F23F00F59E80 /* RandomNumberGameApp.swift in Sources */,
 			);
@@ -291,6 +295,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,6 +325,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -20,14 +20,19 @@ extension ShapeStyle where Self == Color {
 
 struct ContentView: View {
     //@State private var gameScoreEU : Int = 0
+    
     @State var showCorrect = false
+    @State var FakeRound = 44
     @State private var randomnumber : Int = 50
     @State var Score : Int = 0
     @State var Round : Int = 0
     @State var LastRound : Int = 0
-    
+    @State var showifWrong = false
     @State var LastRoundNumber = UserDefaults.standard.integer(forKey: "lastnumber")
+    
     @State var goBack = false
+    @Environment(\.presentationMode) var presentationMode
+    
     
     var body: some View {
         
@@ -49,7 +54,8 @@ struct ContentView: View {
             VStack {
                 HStack {
                     Button(action: {
-                        self.goBack = true
+                        //presentationMode.wrappedValue.dismiss()
+                        goBack = true
                     }) {
                         Image(systemName: "arrow.backward.square.fill")
                             .foregroundColor(.random)
@@ -62,6 +68,11 @@ struct ContentView: View {
                         
                     }.fullScreenCover(isPresented: $goBack, content: { Homescreen()
                     })
+                    /*
+                     .fullScreenCover(isPresented: $goBack, content: { Homescreen()
+                     })
+                     */
+                    
                     
                 }
                 
@@ -87,6 +98,9 @@ struct ContentView: View {
                         .padding()
                 }
                 
+                Text("0-100")
+                    .foregroundColor(.random)
+                
                 /*
                  HStack{
                  Text("Previous Number:")
@@ -96,17 +110,34 @@ struct ContentView: View {
                  }
                  */
                 
-                Text("\(String(randomnumber))")
-                    .font(.system(size: 110))
-                    .foregroundColor(.white)
-                    .shadow(color: .black, radius: 10, x: 0, y: 0)
-                    .padding()
+                ZStack {
+                    Text("\(String(randomnumber))")
+                        .font(.system(size: 140))
+                        .foregroundColor(.white)
+                        .shadow(color: .black, radius: 10, x: 0, y: 0)
+                        .padding()
+                    
+                    
+                    if(showCorrect)
+                    {
+                        
+                        Text("+ 1").fontWeight(.bold).opacity(1).foregroundColor(Color.green).font(.system(size: 50))
+                            .shadow(color: .black, radius: 10, x: 0, y: 0)
+                        
+                    }
+                    
+                    if(showifWrong) {
+                        Text("Try Again!").fontWeight(.bold).opacity(1).foregroundColor(Color.red).font(.system(size: 50))
+                            .shadow(color: .black, radius: 10, x: 0, y: 0)
+                    }
+                }
                 
                 
                 
                 
                 
-                Text("Streak:   \(String(Round))")
+                //Text("Streak:   \(String(Round))")
+                Text("Streak:   \(String(FakeRound))")
                     .foregroundColor(.white)
                     .padding()
                     .font(.system(size: 30))
@@ -141,11 +172,21 @@ struct ContentView: View {
                         
                         if randomnumber > randomInt {
                             Round = Round + 1
-                            popupstreak()
+                            showCorrect = true
                             
-                        }else if randomnumber < randomInt {
-                            Round = 0
-                        }
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                                
+                                showCorrect = false
+                                
+                            }}else if randomnumber < randomInt {
+                                Round = 0
+                                showifWrong = true
+                                
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                                    
+                                    showifWrong = false
+                                }
+                            }
                         randomnumber = randomInt
                         let oldstreak = UserDefaults.standard.integer(forKey: "beststreak")
                         
@@ -184,6 +225,12 @@ struct ContentView: View {
                                 
                             }}else if randomnumber > randomInt {
                                 Round = 0
+                                showifWrong = true
+                                
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                                    
+                                    showifWrong = false
+                                }
                             }
                         randomnumber = randomInt
                         let oldstreak = UserDefaults.standard.integer(forKey: "beststreak")
@@ -228,6 +275,7 @@ struct ContentView: View {
                     
                     let randomInt = Int.random(in: 1...100)
                     randomnumber = randomInt
+                    Round = 0
                 }) {
                     Text("RANDOM")
                         .font(.system(size: 40))
@@ -250,6 +298,8 @@ struct ContentView: View {
                 
                 
             }
+            
+            
         }
         
         
@@ -257,10 +307,13 @@ struct ContentView: View {
         
     }
     
+    
+    
+    
     func popupstreak() {
         showCorrect = true
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             
             showCorrect = false
         }

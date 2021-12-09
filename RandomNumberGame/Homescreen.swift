@@ -25,11 +25,21 @@ struct Homescreen: View {
     var body: some View {
         ZStack {
             Image("RandomBackground")
-                        .resizable()
-                        .scaledToFill()
-                        .edgesIgnoringSafeArea(.all)
+                .resizable()
+                .scaledToFill()
+                .edgesIgnoringSafeArea(.all)
             
             VStack {
+                
+                //kommande
+                /*
+                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                 Image(systemName: "gearshape.fill")
+                 .foregroundColor(.random)
+                 .padding(.leading, 280.0)
+                 .font(.system(size: 40))
+                 }
+                 */
                 
                 
                 HStack {
@@ -40,14 +50,14 @@ struct Homescreen: View {
                     SmallCoolBtn(smalltext: "O")
                     SmallCoolBtn(smalltext: "M")
                 }
-                    
+                
                 HStack{
-                SmallCoolBtn(smalltext: "N")
-                SmallCoolBtn(smalltext: "U")
-                SmallCoolBtn(smalltext: "M")
-                SmallCoolBtn(smalltext: "B")
-                SmallCoolBtn(smalltext: "E")
-                SmallCoolBtn(smalltext: "R")
+                    SmallCoolBtn(smalltext: "N")
+                    SmallCoolBtn(smalltext: "U")
+                    SmallCoolBtn(smalltext: "M")
+                    SmallCoolBtn(smalltext: "B")
+                    SmallCoolBtn(smalltext: "E")
+                    SmallCoolBtn(smalltext: "R")
                         .padding(.trailing)
                     
                     
@@ -55,9 +65,9 @@ struct Homescreen: View {
                     SmallCoolBtn(smalltext: "A")
                     SmallCoolBtn(smalltext: "M")
                     SmallCoolBtn(smalltext: "E")
-                
-                }
                     
+                }
+                
                 
                 
                 Text("Top streak:")
@@ -66,7 +76,7 @@ struct Homescreen: View {
                     .font(.largeTitle)
                     .padding()
                 
-               
+                
                 ZStack {
                     Text(String(SavedStreak))
                     
@@ -85,7 +95,7 @@ struct Homescreen: View {
                                     UserDefaults.standard.set(Hearts, forKey: "hearts")
                                     
                                 }
-                                
+                               
                             }
                             DispatchQueue.main.asyncAfter(deadline: .now()+0.1) {
                                 withAnimation {
@@ -93,6 +103,8 @@ struct Homescreen: View {
                                 }
                             }
                         }
+                    
+                    
                     
                     
                     
@@ -104,14 +116,14 @@ struct Homescreen: View {
                                 .foregroundColor(.random)
                                 .frame(width: 100, height: 100)
                                 .opacity(ShowHearts ? 0.9 : 0)
-                            .animation(.linear(duration: 0.2))
+                                .animation(.linear(duration: 0.2))
                             Image(systemName: "heart.fill")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .foregroundColor(.random)
                                 .frame(width: 100, height: 100)
                                 .opacity(ShowHearts ? 0.9 : 0)
-                            .animation(.linear(duration: 0.2))
+                                .animation(.linear(duration: 0.2))
                             
                         }
                         
@@ -122,18 +134,18 @@ struct Homescreen: View {
                                 .foregroundColor(.random)
                                 .frame(width: 100, height: 100)
                                 .opacity(ShowHearts ? 0.9 : 0)
-                            .animation(.linear(duration: 0.2))
+                                .animation(.linear(duration: 0.2))
                             Image(systemName: "heart.fill")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .foregroundColor(.random)
                                 .frame(width: 100, height: 100)
                                 .opacity(ShowHearts ? 0.9 : 0)
-                            .animation(.linear(duration: 0.2))
+                                .animation(.linear(duration: 0.2))
                             
                         }
                     }
-                                   
+                    
                 }
                 
                 Text(String(Hearts))
@@ -144,23 +156,39 @@ struct Homescreen: View {
                 Text("Give your streak some love by pressing it")
                     .padding(.all)
                     .foregroundColor(.random)
-                    
-                    
+                
+                
                 
                 
                 
                 Button(action: {
-                    self.goNext = true
+                    goNext = true
+                    // goNext = true
                 }) {
                     CoolButton(text: "LETS PLAY")
-                        
+                    
                 }.fullScreenCover(isPresented: $goNext, content: { ContentView()
                 })
-
+                /*
+                 .fullScreenCover(isPresented: $goNext, content: { ContentView()
+                 })
+                 */
+                
             }
+            /*
+             .fullScreenCover(isPresented: $goNext)
+             {
+             ContentView(isPresented: $goNext)
+             }
+             
+             */
             
-            
-            
+            /*
+             fullScreenCover(isPresented: $goNext)
+             {
+             ContentView()
+             }
+             */
         }
     }
 }
